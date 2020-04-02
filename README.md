@@ -45,8 +45,6 @@ bytevec implements `ByteEncodable` out of the box for the following types:
 - `char`, `str` and `String`
 - [`Vec`](http://doc.rust-lang.org/stable/std/vec/struct.Vec.html)
 - [`&[T]`](http://doc.rust-lang.org/stable/std/primitive.slice.html)
-- [`HashMap`](http://doc.rust-lang.org/stable/std/collections/struct.HashMap.html)
-- [`HashSet`](http://doc.rust-lang.org/stable/std/collections/struct.HashSet.html)
 - Tuples with up to 12 elements
 - Custom `struct`s
 
