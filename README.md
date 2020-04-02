@@ -1,8 +1,6 @@
 bytevec: A Rust serialization library that uses byte vectors
 ============================================================
 
-[![Build Status](https://travis-ci.org/fero23/bytevec.svg?branch=master)](https://travis-ci.org/fero23/bytevec)
-[![](https://img.shields.io/crates/v/bytevec.svg)](https://crates.io/crates/bytevec)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE-MIT)
 [![Apache 2.0 licensed](https://img.shields.io/badge/license-APACHE%202.0-blue.svg)](./LICENSE-APACHE)
 
