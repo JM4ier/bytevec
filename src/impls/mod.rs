@@ -37,7 +37,7 @@ macro_rules! def_BVSize {
                 }
                 
                 fn get_size_of() -> Self {
-                    <$t>::from_usize(::std::mem::size_of::<$t>())
+                    <$t>::from_usize(core::mem::size_of::<$t>())
                 }
             }
         )*

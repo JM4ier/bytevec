@@ -1,10 +1,12 @@
-use std::str::Utf8Error;
-use std::convert::From;
-use std::error::Error;
-use std::fmt::{self, Display};
+use core::str::Utf8Error;
+use core::convert::From;
+use alloc::fmt::{self, Display};
+use alloc::string::ToString;
+use alloc::format;
 
 use self::ByteVecError::*;
 use self::BVExpectedSize::*;
+
 
 #[derive(Debug, Clone, Copy)]
 pub enum BVExpectedSize {
@@ -47,27 +49,9 @@ impl Display for ByteVecError {
     }
 }
 
-impl Error for ByteVecError {
-    fn description(&self) -> &str {
-        match *self {
-            StringDecodeUtf8Error(ref utf8_error) => utf8_error.description(),
-            BadSizeDecodeError { .. } => {
-                "the size specified for the structure differs from the size of the given buffer"
-            }
-            OverflowError => "the size of the data structure surpasses max value of the size type",
-        }
-    }
-
-    fn cause(&self) -> Option<&Error> {
-        match *self {
-            StringDecodeUtf8Error(ref utf8_error) => Some(utf8_error),
-            _ => None,
-        }
-    }
-}
-
 impl From<Utf8Error> for ByteVecError {
     fn from(error: Utf8Error) -> ByteVecError {
         StringDecodeUtf8Error(error)
     }
 }
+

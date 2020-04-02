@@ -10,3 +10,5 @@ readme = "README.md"
 keywords = ["serialization", "deserialization", "byte", "vector", "binary"]
 
 [dependencies]
+hashbrown = "0.7"
+

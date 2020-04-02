@@ -1,6 +1,8 @@
 use {BVEncodeResult, BVDecodeResult, BVSize};
 use errors::{ByteVecError, BVExpectedSize};
 
+use alloc::vec::Vec;
+
 /// Provides serialization functionality for the implementing types.
 pub trait ByteEncodable {
     /// Returns the total length of the byte buffer 

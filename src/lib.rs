@@ -134,6 +134,10 @@
 //! ```
 //! [1]: http://doc.rust-lang.org/stable/std/mem/fn.transmute.html
 
+#![no_std]
+extern crate alloc;
+extern crate hashbrown;
+
 #[macro_use]
 mod macros;
 mod traits;
